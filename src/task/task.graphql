@@ -1,0 +1,44 @@
+enum TaskStatus {
+    COMPLETED,
+    INPROGRESS
+}
+
+enum TaskPriority {
+    P1,
+    P2,
+    P3
+}
+
+type Task {
+    _id: ID!
+    title: String!
+    description: String!
+    dueDate: Date
+    scheduledDate: Date
+    status: TaskStatus
+    priority: TaskPriority
+    creationDate: Date,
+    completedDate: Date
+    completionMarkedDate: Date
+}
+
+input TaskInput {
+    userId: ID
+    title: String!
+    description: String!
+    dueDate: Date
+    scheduledDate: Date
+    status: TaskStatus,
+    priority: TaskPriority
+    completedDate: Date
+    completionMarkedDate: Date
+}
+
+type Mutation {
+  addTask(userId:ID!,task: TaskInput!, taskIndex: Int): Task
+  reOrderTask(userId:ID!, newTaskIndex: Int!, currentTaskIndex: Int!): [Task]
+  completeTask(userId:ID!,taskIndex: Int!): Task,
+  modifyTask(userId:ID!,task: TaskInput!, taskIndex: Int!): Task
+}
+
+scalar Date

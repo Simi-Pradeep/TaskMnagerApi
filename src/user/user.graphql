@@ -1,0 +1,23 @@
+type User {
+  _id: String!
+  username: String!
+  password: String!
+  tasks: [Task]
+}
+
+input UserInput {
+  username: String!
+  password: String!
+  fullName: String
+}
+
+type Query {
+  hello: String!
+  users: [User!]
+  user(id: ID!): User!
+}
+
+type Mutation {
+  createUser(input: UserInput!): User
+  loginUser(input: UserInput!): User
+}
