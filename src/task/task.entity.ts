@@ -1,6 +1,6 @@
 import { Column, Entity, ObjectIdColumn } from "typeorm";
 import { TaskPriorityEnum } from "./taskpriority.enum";
-import { TaskStatusEnum } from "./taskStatus.enum";
+import { TaskStatusEnum } from "./taskstatusenum";
 
 export class Task {
     

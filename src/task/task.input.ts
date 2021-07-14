@@ -1,5 +1,5 @@
 import { TaskPriorityEnum } from "./taskpriority.enum"
-import { TaskStatusEnum } from "./taskStatus.enum"
+import { TaskStatusEnum } from "./taskstatusenum"
 
 export class TaskInput {
     userId: string

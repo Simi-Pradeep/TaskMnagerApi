@@ -5,7 +5,7 @@ import { UserService } from 'src/user/user.service';
 import { MongoRepository } from 'typeorm';
 import { Task } from './task.entity';
 import { TaskInput } from './Task.input';
-import { TaskStatusEnum } from './taskStatus.enum';
+import { TaskStatusEnum } from './taskstatusenum';
 import * as uuid from 'uuid';
 
 @Injectable()
