@@ -4,7 +4,7 @@ import { User } from 'src/user/user.entity';
 import { UserService } from 'src/user/user.service';
 import { MongoRepository } from 'typeorm';
 import { Task } from './task.entity';
-import { TaskInput } from './Task.input';
+import { TaskInput } from './taskinput';
 import { TaskStatusEnum } from './taskstatusenum';
 import * as uuid from 'uuid';
 
